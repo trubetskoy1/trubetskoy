@@ -1,0 +1,25 @@
+filters:
+  and:
+    - file.tags.contains("рецензия")
+    - and:
+        - file.name != "Библиотека тегов"
+formulas:
+  Untitled: ""
+views:
+  - type: cards
+    name: представление
+    order:
+      - file.name
+      - Спектакль
+      - tags
+    cardSize: 350
+    imageAspectRatio: 0.55
+  - type: list
+    name: Список
+    order:
+      - file.name
+      - Спектакль
+      - tags
+      - formula.Untitled
+  - type: table
+    name: Таблица
